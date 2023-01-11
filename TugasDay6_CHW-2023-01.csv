@@ -1,0 +1,319 @@
+id,title,description,preconditions,postconditions,tags,priority,severity,type,behavior,automation,status,is_flaky,layer,steps_type,steps_actions,steps_result,steps_data,milestone_id,milestone,suite_id,suite_parent_id,suite,suite_without_cases,parameters
+,,,,,,,,,,,,,,,,,,,,1,,Login,1
+,,,,,,,,,,,,,,,,,,,,2,,Logout,1
+,,,,,,,,,,,,,,,,,,,,3,,"Make Appointment",1
+,,,,,,,,,,,,,,,,,,,,4,,Home,1
+,,,,,,,,,,,,,,,,,,,,5,,History,1
+,,,,,,,,,,,,,,,,,,,,6,,Profile,1
+,,,,,,,,,,,,,,,,,,,,7,,Mail,1
+,,,,,,,,,,,,,,,,,,,,8,,Facebook,1
+,,,,,,,,,,,,,,,,,,,,9,,Twitter,1
+1,"Login Success","Test login functionality","already registered","Redirect to ""Make Appointment"" page",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click Button ""Make Appointment""
+3. Input Username
+4. Input Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Username is appear
+4. Password is appear
+5. Successfully loged in, redirect to ""make appointment"" page.
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. Valid Username
+4. Valid Password
+5. 
+",,,1,,Login,,
+2,"Login Failed; Wrong Username",,"Test login functionality","Showing error message:
+Login failed! Please ensure the username and password are valid..",,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,"1. Access Page
+2. Click Button ""Make Appointment""
+3. Input Invalid Username
+4. Input valid Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Username is appear
+4. Password is appear
+5. Showing error message:
+Login failed! Please ensure the username and password are valid..
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. Invalid Username
+4. valid Password
+5. 
+",,,1,,Login,,
+3,"Login Failed; Wrong Password",,"Test login functionality","Showing error message:
+Login failed! Please ensure the username and password are valid..",,undefined,normal,other,undefined,to-be-automated,actual,no,unknown,classic,"1. Access Page
+2. Click Button ""Make Appointment""
+3. Input Valid Username
+4. Input Invalid Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Username is appear
+4. Password is appear
+5. Showing error message:
+Login failed! Please ensure the username and password are valid..
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. Valid Username
+4. Invalid Password
+5. 
+",,,1,,Login,,
+4,"Login Failed; Without input Username",,"Test login functionality","Showing error message:
+Login failed! Please ensure the username and password are valid..",,undefined,normal,other,undefined,to-be-automated,actual,no,unknown,classic,"1. Access Page
+2. Click Button ""Make Appointment""
+3. Enter an empty username
+4. Input valid Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Username doesn't appear
+4. Password is appear
+5. Showing error message:
+Login failed! Please ensure the username and password are valid..
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. empty username
+4. valid Password
+5. 
+",,,1,,Login,,
+5,"Login Failed; Without input Password",,"Test login functionality","Showing error message:
+Login failed! Please ensure the username and password are valid..",,undefined,normal,other,undefined,to-be-automated,actual,no,unknown,classic,"1. Access Page
+2. Click Button ""Make Appointment""
+3. Input valid Username
+4. Enter an empty Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Username is appear
+4. Password doesn't appear
+5. Showing error message:
+Login failed! Please ensure the username and password are valid..
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. Valid Username
+4. empty password
+5. 
+",,,1,,Login,,
+6,"Login Failed; Without input Username & Password",,"Test login functionality","Showing error message:
+Login failed! Please ensure the username and password are valid..",,undefined,normal,other,undefined,to-be-automated,actual,no,unknown,classic,"1. Access Page
+2. Click Button ""Make Appointment""
+3. Enter an empty Username
+4. Enter an empty Password
+5. Click Button Login
+","1. Show CURA Healthcare Service page
+2. Redirect to login page
+3. Password doesn't appear
+4. Password doesn't appear
+5. Showing error message:
+Login failed! Please ensure the username and password are valid..
+","1. https://katalon-demo-cura.herokuapp.com/
+2. https://katalon-demo-cura.herokuapp.com/profile.php#login
+3. empty Username
+4. empty password
+5. 
+",,,1,,Login,,
+13,"logout successful",,"already logged in","logout successful and back to mainpage without login",,undefined,normal,functional,positive,is-not-automated,actual,no,e2e,classic,"1. Access page
+2. Click hamburger menu
+3. Click Logout
+","1. Show appointment page
+2. all menus appear on the button hamburger menu
+3. Redirect to CURA Healtcare Service mainpage
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. the hamburger menu button is on the top right
+3. 
+",,,2,,Logout,,
+7,"Make Appointment, Facility: Tokyo",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Select visit date
+6. Write a comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date appears
+6. Comments appears
+7. Redirect to appointment confirmation page
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. Facility : ""Tokyo CURA Healthcare Center""
+3. checked
+4. Medicare clicked
+5. visit date selected
+6. Write a comment
+7. 
+",,,3,,"Make Appointment",,
+8,"Make Appointment, Facility: Hongkong",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,undefined,normal,functional,undefined,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Select visit date
+6. Write a comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date appears
+6. Comments appears
+7. Redirect to appointment confirmation page
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. Facility : ""Hongkong CURA Healthcare Center""
+3. 
+4. Medicare clicked
+5. 
+6. 
+7. 
+",,,3,,"Make Appointment",,
+9,"Make Appointment, Facility: Seoul",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,undefined,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Select visit date
+6. Write a comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date appears
+6. Comments appears
+7. Redirect to appointment confirmation page
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. Facility : ""Seoul CURA Healthcare Center""
+3. 
+4. Medicare clicked
+5. 
+6. 
+7. 
+",,,3,,"Make Appointment",,
+10,"Make Appointment without input comment",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,undefined,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Select visit date
+6. Input empty comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date appears
+6. Comment don't appear
+7. Redirect to appointment confirmation page
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. 
+3. 
+4. 
+5. 
+6. 
+7. 
+",,,3,,"Make Appointment",,
+11,"Make Appointment without input visit date",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,undefined,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Without select visit date
+6. Write a comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date don't appears
+6. Comments appears
+7. Showing message:
+""Isi isian ini."" on visit date
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. 
+3. 
+4. 
+5. empty visit date
+6. 
+7. 
+",,,3,,"Make Appointment",,
+12,"Make Appointment without input visit date and comment",,"already logged in","Successbook appointment and Showing Appointment Confirmation",,undefined,normal,functional,negative,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Select dropdown menu ""Facility""
+3. check the checkbox ""Apply for hospital readmission""
+4. Choose Radiobutton ""Healthcare program""
+5. Without select visit date
+6. Write an empty comment
+7. Click button ""Book Appointment""
+","1. Show appointment page
+2. the selected dropdown appears
+3. checklist appears
+4. Clicked appears
+5. visit date don't appear
+6. Comments don't appear
+7. Showing message:
+""Isi isian ini."" on visit date
+","1. https://katalon-demo-cura.herokuapp.com/#appointment
+2. 
+3. 
+4. 
+5. empty visit date
+6. empty comment
+7. 
+",,,3,,"Make Appointment",,
+14,"Home, with login",,"already logged in","Redirect to home mainpage",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click hamburger menu
+3. Click Home
+","1. 
+2. all menus appear on the button hamburger menu
+3. Redirect to CURA Healtcare Service mainpage
+","1. https://katalon-demo-cura.herokuapp.com/
+2. 
+3. 
+",,,4,,Home,,
+15,"Login, with login",,,,,undefined,normal,other,undefined,is-not-automated,actual,no,unknown,classic,,,,,,4,,Home,,
+16,History,"shows history page and the contents of the appointment history","already logged in","shows history page and the contents of the appointment history",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click hamburger menu
+3. Click History
+","1. 
+2. all menus appear on the button hamburger menu
+3. shows history page and the contents of the appointment history
+","1. https://katalon-demo-cura.herokuapp.com/
+2. 
+3. 
+",,,5,,History,,
+17,profile,,"already logged in","Redirect to profile page and show profile",,high,critical,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click hamburger menu
+3. Click Profile
+","1. 
+2. all menus appear on the button hamburger menu
+3. Redirect to profile page and show profile
+","1. https://katalon-demo-cura.herokuapp.com/
+2. 
+3. 
+",,,6,,Profile,,
+18,"Mail, without login","Redirect to mail app and already filled in the email address to the destination address","without login","Redirect to mail app and already filled in the email address to the destination address",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click link ""info@katalon.com""
+","1. 
+2. Redirect to mail app and already filled in the email address to the destination address
+","1. https://katalon-demo-cura.herokuapp.com/
+2. info@katalon.com
+",,,7,,Mail,,
+19,"Mail, with login","Redirect to mail app and already filled in the email address to the destination address","already logged in","Redirect to mail app and already filled in the email address to the destination address",,medium,normal,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access page
+2. Click link ""info@katalon.com""
+","1. 
+2. Redirect to mail app and already filled in the email address to the destination address
+","1. https://katalon-demo-cura.herokuapp.com/
+2. info@katalon.com
+",,,7,,Mail,,
+20,Facebook,"Redirect to facebook CURA Healthcare Service or show facebook accoutn CURA Healthcare Service","with and without login","Redirect to facebook CURA Healthcare Service or show facebook accoutn CURA Healthcare Service",,high,critical,functional,negative,to-be-automated,actual,yes,e2e,classic,"1. Access Page
+2. Click the facebook logo button
+","1. 
+2. Redirect to facebook CURA Healthcare Service or show facebook accoutn CURA Healthcare Service
+","1. https://katalon-demo-cura.herokuapp.com/
+2. 
+",,,8,,Facebook,,
+21,Twitter,"Redirect to twitter CURA Healthcare Service or show twitter accout CURA Healthcare Service","with and without login","Redirect to twitter CURA Healthcare Service or show twitter accout CURA Healthcare Service",,high,critical,functional,positive,to-be-automated,actual,no,e2e,classic,"1. Access Page
+2. Click the facebook logo button
+","1. 
+2. Redirect to twitter CURA Healthcare Service or show twitter accout CURA Healthcare Service
+","1. https://katalon-demo-cura.herokuapp.com/
+2. 
+",,,9,,Twitter,,
